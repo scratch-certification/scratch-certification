@@ -105,29 +105,9 @@ console.log(code); // -> unicorn`)0~$$6+|!
 **Notes:**
 - There are no notes for this function.
 
-### compareValues
-**Functionalities:**
-Takes 2 values and compares them, saving you time from comparing values on your own, then returns HTML status codes dependent on what it's given.
-
-**Parameters:**
-- `str` - The string - Mandatory
-- `data` -The string being compared to str - Mandatory
-
-**Example Code:**
-```js
-const sctf = require('scratch-certification'); // Require SCTF
-
-let createdCode = createCode('unicorn'); // Create random code
-// Returns 404 because strings are not the same
-console.log(compareValues('createdCode', 'random');
-```
-
-**Notes:**
-- There are no notes for this function.
 
 ## Contact
 **b1048546:**
-[Contact b1048546 on Scratch here.] (https://scratch.mit.edu/users/b1048546/)
+[Contact b1048546 on Scratch here.](https://scratch.mit.edu/users/b1048546/)
 **LilJuiceBox491:**
-[Contact LilJuiceBox491 on Scratch here.]
-(https://scratch.mit.edu/users/LilJuiceBox491/)
+[Contact LilJuiceBox491 on Scratch here.](https://scratch.mit.edu/users/LilJuiceBox491/)

@@ -44,22 +44,9 @@ function createCode(str, len) {
   return code;
 }
 
-function compareValues(str, data) {
-  try {
-    if(str == data) {
-      return 302;
-    } else {
-      return 404;
-    }
-  } catch (error) {
-    return 400;
-  }
-}
-
 // Export
 module.exports = {
   createHash,
   checkHash,
   createCode,
-  compareValues
 }
