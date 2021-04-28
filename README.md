@@ -30,12 +30,12 @@ This module has a system of *hashes* and *codes*. Think of a hash as a random un
 - It solves the web exploit problem in existing modules, by having flexability to require a username to login via a login/sign in system.
 
 ### **Cons:**
-- Only 3 functions (More coming soon)
+- Only 4 functions (More coming soon)
 - No multi-language suport (Coming soon)
 
 ## Example Code / Usage
 
-### Create Hash
+### createHash
 **Functionalities:**
 Creates a random distinguishable crypto generated string.
 
@@ -48,7 +48,7 @@ const sctf = require('scratch-certification'); // Require SCTF
 
 const myHash = sctf.createHash(50); // Create hash with a length of 50 
 
-console.log(myHash); // -> 937edd69e10f253dd309a0e8b7d126f8f37cfd277577a494cd
+console.log(myHash); // -> abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx
 ```
 
 **Notes:**
@@ -56,7 +56,7 @@ console.log(myHash); // -> 937edd69e10f253dd309a0e8b7d126f8f37cfd277577a494cd
 
 ___
 
-### Check Hash
+### checkHash
 **Functionalities:**
 Checks the user's Scratch profile for the hash, returns HTTP status code depending on what it finds
 
@@ -85,7 +85,7 @@ sctf.checkHash(hash, 'griffpatch').then((res) => {
 
 ___
 
-### Create Code
+### createCode
 **Functionalities:**
 Takes a password (recommended user input), and adds characters at the end to secure it further, creating a code.
 
@@ -105,8 +105,29 @@ console.log(code); // -> unicorn`)0~$$6+|!
 **Notes:**
 - There are no notes for this function.
 
+### compareValues
+**Functionalities:**
+Takes 2 values and compares them, saving you time from comparing values on your own, then returns HTML status codes dependent on what it's given.
+
+**Parameters:**
+- `str` - The string - Mandatory
+- `data` -The string being compared to str - Mandatory
+
+**Example Code:**
+```js
+const sctf = require('scratch-certification'); // Require SCTF
+
+let createdCode = createCode('unicorn'); // Create random code
+// Returns 404 because strings are not the same
+console.log(compareValues('createdCode', 'random');
+```
+
+**Notes:**
+- There are no notes for this function.
+
 ## Contact
 **b1048546:**
-https://scratch.mit.edu/users/b1048546/
+[Contact b1048546 on Scratch here.] (https://scratch.mit.edu/users/b1048546/)
 **LilJuiceBox491:**
-https://scratch.mit.edu/users/LilJuiceBox491/
+[Contact LilJuiceBox491 on Scratch here.]
+(https://scratch.mit.edu/users/LilJuiceBox491/)

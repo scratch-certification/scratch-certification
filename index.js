@@ -8,7 +8,7 @@ const html = require('node-html-parser');
 
 // Function Definitions
 function createHash(len) {
-  var hash = cryptoRandomString({ length: len || 45, distinguishable: 'true' });
+  var hash = cryptoRandomString({ length: len || 45, characters: 'abcdefghijklmnopqrstuvwxyz' });
   return hash;
 }
 
@@ -24,7 +24,7 @@ function checkHash(hash, user) {
           plaintext: root.querySelector('.content').text.trim(),
           username: root.querySelector('#comment-user').getAttribute('data-comment-user')
         };
-        if (comment.plaintext === hash && comment.username == user) {
+        if (comment.plaintext == hash && comment.username == user) {
           return 302;
         } else {
           return 404;
@@ -44,9 +44,22 @@ function createCode(str, len) {
   return code;
 }
 
+function compareValues(str, data) {
+  try {
+    if(str == data) {
+      return 302;
+    } else {
+      return 404;
+    }
+  } catch (error) {
+    return 400;
+  }
+}
+
 // Export
 module.exports = {
   createHash,
   checkHash,
   createCode,
+  compareValues
 }
