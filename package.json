@@ -1,0 +1,27 @@
+{
+  "name": "scratch-certification",
+  "version": "0.0.0",
+  "description": "A module to create and verify 3rd party Scratch connections.",
+  "main": "index.js",
+  "homepage": "https://github.com/scratch-certification/scratch-certification#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scratch-certification/scratch-certification"
+  },
+  "dependencies": {
+    "crypto-random-string": "^3.3.1",
+    "node-fetch": "^2.6.1",
+    "node-html-parser": "^3.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [
+    "scratch",
+    "certification",
+    "sv",
+    "sv2",
+    "soa2"
+  ],
+  "author": "scratch-certification",
+  "license": "MIT"
+}
