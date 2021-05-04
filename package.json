@@ -1,6 +1,6 @@
 {
   "name": "scratch-certification",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A module to create and verify 3rd party Scratch connections.",
   "main": "index.js",
   "homepage": "https://github.com/scratch-certification/scratch-certification#readme",

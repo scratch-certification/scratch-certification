@@ -21,34 +21,35 @@ import 'scratch-certification';
 ```
 
 ## Concept
-This module has a system of *hashes* and *codes*. Think of a hash as a random unique string to initialize the Scratch connection, and a code as a password to log into your Scratch connnection.
+This module has a system of *hashes* and *codes*. A hash is a random unique string to initialize the Scratch connection, and a code as a password to log into your Scratch connnection.
 
-## Pros and Cons
-### **Pros:**
+## Pros
 - It's a module, meaning it grants developers more flexability and customization for usage of their choice
 - The code system allows users to have a more memorable login method, and a partial account-based system
 - It solves the web exploit problem in existing modules, by having flexability to require a username to login via a login/sign in system.
-
-### **Cons:**
-- Only 4 functions (More coming soon)
-- No multi-language suport (Coming soon)
 
 ## Example Code / Usage
 
 ### createHash
 **Functionalities:**
-Creates a random distinguishable crypto generated string.
+Creates a warning with a random crypto generated string.
 
 **Parameters:**
+- `site` - The name of the site being used, or an abbreviation. - Mandatory
+- `owner` - The Scratcher who owns the site being used. - Mandatory
 - `length` - The length of the hash (Leave blank for a default of 45) - Optional
 
 **Example Code:**
 ```js
 const sctf = require('scratch-certification'); // Require SCTF
 
-const myHash = sctf.createHash(50); // Create hash with a length of 50 
+const myHash = sctf.createHash('site', 'griffpatch', 40); // Create hash with a length of 40 
 
-console.log(myHash); // -> abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx
+console.log(myHash); 
+/* -> To prevent man in the middle attacks, make sure this code is from site and is owned by griffpatch, otherwise 
+DO NOT TRUST THIS CODE: lprdosugypqvuxlsetnjzuktmcvmefooydigppzb 
+- Delete this code after verifying.
+*/
 ```
 
 **Notes:**
@@ -61,7 +62,7 @@ ___
 Checks the user's Scratch profile for the hash, returns HTTP status code depending on what it finds
 
 **Parameters:**
-- `Hash` - The hash to check for (generated with `createhash()` or your own generated hash (not recommended)) - Mandatory
+- `Hash` - The hash to check for (generated with `createHash()` or your own generated hash (not recommended)) - Mandatory
 - `User` - The Scratch profile username that the module checks for the hash on - Mandatory
 
 **Example Code:**
@@ -87,7 +88,7 @@ ___
 
 ### createCode
 **Functionalities:**
-Takes a password (recommended user input), and adds characters at the end to secure it further, creating a code.
+Takes a password (recommended user input), and adds random characters at the end to make a code.
 
 **Parameters:**
 - `Password` - The password to secure and return - Mandatory
@@ -109,5 +110,6 @@ console.log(code); // -> unicorn`)0~$$6+|!
 ## Contact
 **b1048546:**
 [Contact b1048546 on Scratch here.](https://scratch.mit.edu/users/b1048546/)
+
 **LilJuiceBox491:**
 [Contact LilJuiceBox491 on Scratch here.](https://scratch.mit.edu/users/LilJuiceBox491/)

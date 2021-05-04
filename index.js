@@ -7,8 +7,8 @@ const cryptoRandomString = require('crypto-random-string');
 const html = require('node-html-parser');
 
 // Function Definitions
-function createHash(len) {
-  var hash = cryptoRandomString({ length: len || 45, characters: 'abcdefghijklmnopqrstuvwxyz' });
+function createHash(site, owner, len) {
+  var hash = 'Copy this entire paragraph. To prevent man in the middle attacks, make sure this paragraph is from ' + site + ' and is owned by ' + owner +', otherwise DO NOT TRUST THIS: ' + cryptoRandomString({ length: len || 45, characters: 'abcdefghijklmnopqrstuvwxyz' }) + ' - Delete the comment after verifying.'
   return hash;
 }
 
